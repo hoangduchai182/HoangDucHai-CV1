@@ -2,56 +2,63 @@ body {
   margin: 0;
   padding: 0;
 }
-.font-title {
-  font-family: "Josefin Sans", sans-serif;
-  color: #000;
-}
-.img-canhan {
-  width: 250px;
-  height: 300px;
-  border: 3px solid rgb(100, 179, 212);
-  border-radius: 5px;
-}
-.div-img {
-  text-align: center;
-}
-
-.text_size {
-  font-size: 13px;
-  margin-bottom: 10px;
-  color: #333300;
-  font-weight: 700;
-}
 .containerAll {
   margin: 5px auto;
   max-width: 800px;
   border-radius: 10px;
-}
-.container1 {
-  border-radius: 10px 0 0 10px;
-  background-image: linear-gradient(rgb(0, 212, 212), rgb(156, 156, 156));
-  max-width: 300px;
-}
-.container2 {
-  max-width: 500px;
-}
-.border__relative {
-  position: relative;
-  margin-top: 32px;
-}
-.info__canhan {
-  position: absolute;
-  left: 50%;
-  top: -18px;
-  background-color: rgb(0, 255, 255);
-  border-radius: 10px;
-  transform: translate(-50%, 0);
-}
-.text_size_1 {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-.uu__diem {
-  font-size: 15px;
-  font-weight: 700;
+
+  .container1 {
+    border-radius: 10px 0 0 10px;
+    background-image: linear-gradient(rgb(0, 212, 212), rgb(156, 156, 156));
+    max-width: 300px;
+
+    .div-img {
+      text-align: center;
+
+      .img-canhan {
+        width: 250px;
+        height: 300px;
+        border: 3px solid rgb(100, 179, 212);
+        border-radius: 5px;
+      }
+    }
+
+    .font__title {
+      font-family: "Josefin Sans", sans-serif;
+      color: #000;
+    }
+
+    .text__size {
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #333300;
+      font-weight: 700;
+    }
+  }
+
+  .container2 {
+    max-width: 500px;
+
+    .info__canhan {
+      position: absolute;
+      left: 50%;
+      top: -18px;
+      background-color: rgb(0, 255, 255);
+      border-radius: 10px;
+      transform: translate(-50%, 0);
+    }
+    .border__relative {
+      position: relative;
+      margin-top: 32px;
+    }
+
+    .text_size_1 {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .uu__diem {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
 }
