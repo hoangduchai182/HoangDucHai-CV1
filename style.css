@@ -164,3 +164,9 @@ body {
   font-weight: var(--accent-font-weight);
   margin-top: 5px;
 }
+
+.item-date {
+  font-style: italic;
+  color: #666;
+  margin-top: 3px;
+}
