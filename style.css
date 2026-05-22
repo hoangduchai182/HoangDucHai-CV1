@@ -47,7 +47,7 @@ body {
 
 /* ===== CV CONTAINER (Khổ A4: 210mm x 297mm = 794px x 1123px ở 96dpi) ===== */
 .cv-container {
-  width: 794px;
+  width: 996px;
   min-height: 1123px;
   background: var(--card-bg);
   box-shadow: var(--shadow-lg);
@@ -503,7 +503,6 @@ body {
 
 /* ===== PRINT ===== */
 @media print {
-  /* Buộc in màu nền */
   *,
   *::before,
   *::after {
@@ -528,14 +527,13 @@ body {
     overflow: visible !important;
   }
 
-  /* ===== GIỮ HEADER 2 CỘT ===== */
   .cv-header {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 24px 28px !important;
+    padding: 32px 16px !important;
     background: #0f172a !important;
     color: #f1f5f9 !important;
   }
@@ -555,7 +553,7 @@ body {
   .header-right {
     display: flex !important;
     flex-direction: row !important;
-    gap: 24px !important;
+    gap: 28px !important;
     flex-shrink: 0 !important;
   }
 
@@ -572,30 +570,37 @@ body {
   }
 
   .name-title h1 {
-    font-size: 22px !important;
+    font-size: 24px !important;
     color: #fff !important;
+    letter-spacing: 1px !important;
   }
 
   .subtitle {
-    color: #818cf8 !important;
-    font-size: 13px !important;
+    color: #a5b4fc !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
   }
 
   .contact-info p,
   .personal-info p {
-    color: #cbd5e1 !important;
-    margin-bottom: 4px !important;
-    font-size: 10.5px !important;
+    color: #e2e8f0 !important;
+    margin-bottom: 5px !important;
+    font-size: 13px !important;
+    gap: 8px !important;
+    line-height: 1.5 !important;
   }
 
   .contact-info p i,
   .personal-info p i {
-    color: #818cf8 !important;
+    color: #a5b4fc !important;
+    font-size: 13px !important;
+    width: 18px !important;
   }
 
   .contact-info a {
-    color: #cbd5e1 !important;
+    color: #e2e8f0 !important;
     text-decoration: none !important;
+    font-size: 12.5px !important;
   }
 
   /* ===== BODY ===== */
