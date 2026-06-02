@@ -181,6 +181,9 @@ body {
   padding: 36px 44px;
   position: relative;
 }
+time {
+  font-size: 14px;
+}
 
 .timeline-line {
   position: absolute;
@@ -286,6 +289,7 @@ body {
   font-weight: var(--font-bold-semi);
   gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .item-header strong {
@@ -310,13 +314,13 @@ body {
   font-style: italic;
   margin-bottom: 6px;
   color: var(--text-light);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* ===== DETAILS LIST ===== */
 .details-list {
   padding-left: 18px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-color);
   line-height: 1.7;
 }
@@ -340,9 +344,10 @@ body {
 }
 
 /* ===== SKILLS LIST ===== */
+
 .skills-list {
   list-style: none;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .skills-list li {
@@ -360,19 +365,15 @@ body {
 }
 
 /* ===== PROJECT METADATA ===== */
+
 .item-role {
   font-weight: var(--accent-font-weight);
   margin-top: 4px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 6px;
-}
-
-.item-role::before {
-  content: "⚡";
-  font-size: 12px;
 }
 
 .item-date {
@@ -385,20 +386,16 @@ body {
   gap: 6px;
 }
 
-.item-date::before {
-  content: "📅";
-  font-size: 11px;
-}
-
 .item-description {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-light);
   margin-top: 2px;
 }
 
 /* ===== SECTION CONTENT PARAGRAPH ===== */
+
 .section-content > p {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--text-color);
   line-height: 1.7;
   background: var(--accent-bg);

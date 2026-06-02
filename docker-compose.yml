@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  cv-app:
+    build: .
+    container_name: cv-container
+    ports:
+      - "3333:3333"
+    restart: always
+    # Dòng dưới đây (Optional) giúp bạn sửa HTML/CSS bên ngoài thì trang web tự cập nhật luôn không cần build lại
+    volumes:
+      - .:/app

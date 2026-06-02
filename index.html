@@ -3,25 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV - Hoàng Đức Hải</title>
-    <!-- 1. Bootstrap (load trước) -->
+    <title>CV - Hoàng Đức Hải | Full-Stack Developer</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- 2. Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- 3. Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- 4. Custom CSS (load cuối để override) -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -29,7 +25,7 @@
       <header class="cv-header">
         <div class="header-left">
           <div class="avatar">
-            <img src="Ca-nhan.jpg" alt="Hoàng Đức Hải" />
+            <img src="ca-nhan.png" alt="Hoàng Đức Hải - Full-stack Developer" />
           </div>
           <div class="name-title">
             <h1>Hoàng Đức Hải</h1>
@@ -38,27 +34,52 @@
         </div>
 
         <div class="header-right">
-          <div class="contact-info">
-            <p><i class="fas fa-phone"></i> 0362702071</p>
-            <p><i class="fas fa-envelope"></i> hoangduchai1822002@gmail.com</p>
+          <address class="contact-info">
             <p>
-              <i class="fab fa-facebook"></i>
-              <a href="https://facebook.com/hoang.uchai.490674" target="_blank"
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <a href="tel:0362702071">0362702071</a>
+            </p>
+            <p>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:hoangduchai1822002@gmail.com"
+                >hoangduchai1822002@gmail.com</a
+              >
+            </p>
+            <p>
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <a
+                href="https://facebook.com/hoang.uchai.490674"
+                target="_blank"
+                rel="noopener noreferrer"
                 >facebook.com/hoang.uchai.490674</a
               >
             </p>
             <p>
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/hoangduchai182" target="_blank"
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <a
+                href="https://github.com/hoangduchai182"
+                target="_blank"
+                rel="noopener noreferrer"
                 >github.com/hoangduchai182</a
               >
             </p>
-          </div>
+          </address>
           <div class="personal-info">
-            <p><i class="fas fa-user"></i> Nam</p>
-            <p><i class="fas fa-calendar"></i> 18/02/2002</p>
-            <p><i class="fas fa-location-dot"></i>Xã Đàn, Đống Đa, Hà Nội</p>
-            <p><i class="fas fa-globe"></i>haitemobi.id.vn</p>
+            <p><i class="fas fa-user" aria-hidden="true"></i> Nam</p>
+            <p><i class="fas fa-calendar" aria-hidden="true"></i> 18/02/2002</p>
+            <p>
+              <i class="fas fa-location-dot" aria-hidden="true"></i> Xã Đàn,
+              Đống Đa, Hà Nội
+            </p>
+            <p>
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <a
+                href="https://cv.haitemobi.id.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >cv.haitemobi.id.vn</a
+              >
+            </p>
           </div>
         </div>
       </header>
@@ -67,13 +88,15 @@
         <div class="timeline-line"></div>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          </div>
           <div class="section-content">
             <h2 class="section-title">Học vấn</h2>
             <div class="content-item">
               <div class="item-header">
                 <strong>Trường Đại học Kinh tế Quốc dân</strong>
-                <span>2020 - 2024</span>
+                <time>2020 - 2024</time>
               </div>
               <p class="item-sub">Cử nhân Khoa học Máy tính</p>
               <ul class="details-list">
@@ -85,7 +108,9 @@
         </section>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-bullseye" aria-hidden="true"></i>
+          </div>
           <div class="section-content">
             <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
             <p>
@@ -102,19 +127,21 @@
         </section>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+          </div>
           <div class="section-content">
             <h2 class="section-title">Kinh nghiệm làm việc</h2>
             <div class="content-item">
               <div class="item-header">
                 <strong>Tổng thời gian làm việc: 2,5 năm</strong>
-                <span>1/2024 - nay</span>
+                <time>1/2024 - nay</time>
               </div>
             </div>
             <div class="content-item">
               <div class="item-header">
                 <strong>Công ty Cổ phần công nghệ VHMT Việt Nam</strong>
-                <span>1/2024 - 6/2024</span>
+                <time>1/2024 - 6/2024</time>
               </div>
               <p class="item-sub">Thực tập - FullStack Developer</p>
               <ul class="details-list">
@@ -132,7 +159,7 @@
             <div class="content-item">
               <div class="item-header">
                 <strong>Công ty Cổ phần công nghệ VHMT Việt Nam</strong>
-                <span>6/2024 - nay</span>
+                <time>6/2024 - nay</time>
               </div>
               <p class="item-sub">Nhân viên lập trình - FullStack Developer</p>
               <ul class="details-list">
@@ -156,7 +183,7 @@
                   dựng các giải pháp sử dụng AI
                 </li>
                 <li>
-                  Học tập các chứng chỉ microsoft, google, openAI,... cho công
+                  Học tập các chứng chỉ Microsoft, Google, OpenAI,... cho công
                   ty
                 </li>
               </ul>
@@ -165,7 +192,9 @@
         </section>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-certificate"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+          </div>
           <div class="section-content mb-3">
             <h2 class="section-title">Chứng chỉ</h2>
             <div class="content-item">
@@ -200,94 +229,82 @@
         </section>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-code"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-code" aria-hidden="true"></i>
+          </div>
           <div class="section-content mb-3">
             <h2 class="section-title">Kỹ năng</h2>
+
             <div class="content-item">
-              <div class="item-header">Lập trình Web Node JS</div>
-              <ul class="details-list">
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Boostrap (Thành thạo Bootstrap Studio), TailwindCSS</li>
-                <li>Node.js, Express</li>
-                <li>MongoDB, My SQL, IndexedDB, LocalStorage</li>
-                <li>ReactJS, TypeScript, Next.js</li>
-              </ul>
-            </div>
-            <div class="content-item">
-              <div class="item-header">Lập trình App Desktop</div>
-              <ul class="details-list">
-                <li>Electron, Node.js</li>
-                <li>Tauri, Rust</li>
-              </ul>
-            </div>
-            <div class="content-item">
-              <div class="item-header">Lập trình Python</div>
+              <div class="item-header">Web Development (Full-Stack)</div>
               <ul class="details-list">
                 <li>
-                  Python (Hiểu biết ở mức độ Midlever, có thể xây dựng các ứng
-                  dụng cơ bản, tool, script tự động hóa, phân tích sắp xếp dữ
-                  liệu excel,...)
+                  <strong>Frontend:</strong> HTML5, CSS3, JavaScript,
+                  TypeScript, ReactJS, Next.js, Bootstrap (Bootstrap Studio),
+                  TailwindCSS
+                </li>
+                <li>
+                  <strong>Backend & Databases:</strong> Node.js, Express,
+                  MongoDB, MySQL, IndexedDB, LocalStorage
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
-              <div class="item-header">Tự động hóa</div>
+              <div class="item-header">Cross-Platform & Languages</div>
               <ul class="details-list">
                 <li>
-                  Browser Automation: Xây dựng tool tự động hóa trên web phục
-                  vụ:
-                  <ul>
-                    <li>Các công việc lặp đi lặp lại</li>
-                    <li>Thu thập dữ liệu</li>
-                  </ul>
-                </li>
-                <li>Automa (Window automation)</li>
-                <li>Macrodroid (Android automation)</li>
-                <li>N8N: No-code automation platform</li>
-                <li>Dify: AI workflow automation platform</li>
-              </ul>
-            </div>
-            <div class="content-item">
-              <div class="item-header">Server</div>
-              <ul class="details-list">
-                <li>Xây dựng và quản lý server (Tên miền, Hosting)</li>
-                <li>
-                  Storage: Google cloud, Firebase, Database lưu trữ tự host
-                </li>
-                <li>Docker: Containerization for application deployment</li>
-              </ul>
-            </div>
-            <div class="content-item">
-              <div class="item-header">Quản lý dự án</div>
-              <ul class="details-list">
-                <li>
-                  Kinh nghiệm xây dựng, triển khai phần mềm quản lý trên:
-                  NocoBase, Notion, Lark
+                  <strong>Desktop Applications:</strong> Electron (Node.js),
+                  Tauri (Rust)
                 </li>
                 <li>
-                  Kinh nghiệm quản lý dự án, phân công công việc, theo dõi tiến
-                  độ và đảm bảo chất lượng sản phẩm cuối cùng
+                  <strong>Python (Mid-level):</strong> Xây dựng ứng dụng,
+                  tool/script tự động hóa, phân tích và xử lý dữ liệu Excel
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
-              <div class="item-header">AI</div>
+              <div class="item-header">AI Integration & Automation</div>
               <ul class="details-list">
                 <li>
-                  Sử dụng thành thạo các công cụ AI để tăng năng suất làm việc
-                  và giải quyết vấn đề:
-                  <ul>
-                    <li>ChatGPT, Gemini, Claude: AI chatbots</li>
-                    <li>DALL-E, Midjourney: AI tạo ảnh</li>
-                    <li>
-                      Codeium, GitHub Copilot, Cursor, Antigravity: AI code
-                      assistants
-                    </li>
-                  </ul>
+                  <strong>Mô hình AI:</strong> Kinh nghiệm clone, tinh chỉnh
+                  (fine-tune) và đào tạo mô hình trên Huggingface, LocalAI
                 </li>
                 <li>
-                  Có kinh nghiệm clone, tinh chỉnh, đào tạo mô hình AI trên
-                  Huggingface hoặc LocalAI
+                  <strong>Hệ sinh thái AI:</strong> Sử dụng thành thạo AI
+                  Chatbots (ChatGPT, Gemini, Claude), AI Assistants (Cursor,
+                  GitHub Copilot, Codeium, Antigravity) và AI Tạo ảnh (DALL-E,
+                  Midjourney)
+                </li>
+                <li>
+                  <strong>Tự động hóa Quy trình:</strong> Browser Automation
+                  (thu thập dữ liệu, xử lý tác vụ lặp lại), Automa (Windows),
+                  Macrodroid (Android)
+                </li>
+                <li>
+                  <strong>Nền tảng Low-code/No-code:</strong> Dify (AI
+                  workflow), N8N (Automation platform)
+                </li>
+              </ul>
+            </div>
+
+            <div class="content-item">
+              <div class="item-header">DevOps & Project Management</div>
+              <ul class="details-list">
+                <li>
+                  <strong>Infrastructure & Server:</strong> Triển khai và quản
+                  lý Server (Tên miền, Hosting), Docker (Containerization),
+                  Storage (Google Cloud, Firebase, Self-hosted DB)
+                </li>
+                <li>
+                  <strong>Quản lý & Vận hành:</strong> Quản lý dự án, lập kế
+                  hoạch, phân công công việc, kiểm soát tiến độ và chất lượng
+                  sản phẩm
+                </li>
+                <li>
+                  <strong>Hệ thống quản trị:</strong> Kinh nghiệm triển khai
+                  phần mềm quản lý doanh nghiệp trên NocoBase, Notion, Lark
                 </li>
               </ul>
             </div>
@@ -295,15 +312,17 @@
         </section>
 
         <section class="cv-section">
-          <div class="section-icon"><i class="fas fa-diagram-project"></i></div>
+          <div class="section-icon">
+            <i class="fas fa-diagram-project" aria-hidden="true"></i>
+          </div>
           <div class="section-content">
             <h2 class="section-title">Dự án</h2>
+
             <div class="content-item">
               <div class="item-header">
                 <strong
                   >TrueVoiceAI - Ứng dụng Desktop chuyển văn bản thành giọng nói
-                  bằng AI. Hỗ trợ biên tập sách audio, sách đa phương
-                  tiện</strong
+                  bằng AI</strong
                 >
               </div>
               <p class="item-date">Tháng 7 năm 2025 - Nay</p>
@@ -335,11 +354,12 @@
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
               <div class="item-header">
                 <strong
-                  >DeepTransAI - Ứng dụng Desktop OCR, dịch thuật tự động. Hỗ
-                  trợ tạo và biên tập sách đa phương tiện</strong
+                  >DeepTransAI - Ứng dụng Desktop OCR, dịch thuật tự
+                  động</strong
                 >
               </div>
               <p class="item-date">Tháng 2 năm 2026 - Nay</p>
@@ -354,29 +374,26 @@
                     </li>
                     <li>
                       Dịch thuật tự động: Dịch văn bản giữa nhiều ngôn ngữ khác
-                      nhau bằng AI với độ chính xác cao và giọng văn mượt mà, tự
-                      nhiên.
+                      nhau bằng AI với độ chính xác cao
                     </li>
                     <li>
-                      Tạo và biên tập sách đa phương tiện từ file PDF (Sản phẩm
-                      là sách lật trang, hỗ trợ cả văn bản, hình ảnh, audio,
-                      video) với giao diện trực quan và dễ sử dụng
+                      Tạo và biên tập sách đa phương tiện từ file PDF (Sách lật
+                      trang hỗ trợ văn bản, hình ảnh, audio, video)
                     </li>
                   </ul>
                 </li>
                 <li>
                   <strong>Frontend:</strong> React + TypeScript, thiết kế giao
-                  diện với TailwindCSS mang lại giao diện hiện đại, thân thiện
-                  và tối ưu trải nghiệm người dùng
+                  diện với TailwindCSS
                 </li>
                 <li>
-                  <strong>Backend:</strong> Rust, xây dựng API với Tauri, quản
-                  lý, giao tiếp với AI model qua HTTP API, quản lý dữ liệu với
-                  Firebase Google Cloud và lưu trữ cục bộ (IndexedDB,
-                  LocalStorage)
+                  <strong>Backend:</strong> Rust, xây dựng API với Tauri, giao
+                  tiếp với AI model qua HTTP API, quản lý dữ liệu với Firebase
+                  Google Cloud và lưu trữ cục bộ (IndexedDB, LocalStorage)
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
               <div class="item-header">
                 <strong
@@ -393,37 +410,26 @@
                 </li>
                 <li>
                   Thiết kế và triển khai phần mềm quản lý công việc trên nền
-                  tảng NocoBase, bao gồm các tính năng:
+                  tảng NocoBase, sử dụng AI Agent và triển khai trên Docker
+                  Server bao gồm các phân hệ:
+                  <ul>
+                    <li>
+                      Quản lý dự án & công việc: Tạo, phân công, theo dõi tiến
+                      độ qua biểu đồ Gantt, Kanban, Lịch
+                    </li>
+                    <li>
+                      Quản lý nhân sự: Lưu trữ thông tin nhân viên, phân quyền
+                      truy cập hệ thống
+                    </li>
+                    <li>
+                      Quản lý khách hàng & tài chính: Theo dõi tương tác, doanh
+                      thu, chi phí và tự động lập báo cáo chi tiết
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  Sử dụng AI Agent, xây dựng phát triển trên Docker Server
-                </li>
-                <ul>
-                  <li>
-                    Quản lý dự án: Tạo, phân công, theo dõi tiến độ công việc
-                  </li>
-                  <li>
-                    Quản lý nhân sự: Quản lý thông tin nhân viên, phân quyền
-                    truy cập
-                  </li>
-                  <li>Quản lý công việc: Quản lý từng task của từng cá nhân</li>
-                  <li>
-                    Quản lý khách hàng: Lưu trữ thông tin khách hàng, theo dõi
-                    tương tác
-                  </li>
-                  <li>
-                    Quản lý tài chính: Theo dõi thu chi, lập báo cáo tài chính
-                  </li>
-                  <li>
-                    Báo cáo và phân tích: Tạo các báo cáo chi tiết về hiệu suất
-                    công việc và tài chính
-                  </li>
-                  <li>
-                    Chế độ xem trên bảng Gant, Kanban, Lịch, các loại biểu đồ
-                  </li>
-                </ul>
               </ul>
             </div>
+
             <div class="content-item">
               <div class="item-header">
                 <strong>Dự án Thu âm 79 cuốn sách NXB Quân Đội Nhân Dân</strong>
@@ -436,28 +442,20 @@
               </p>
               <ul class="details-list">
                 <li>
-                  Làm việc thường xuyên với khách hàng (NXB Quân Đội Nhân Dân)
-                  để hiểu rõ yêu cầu chi tiết của dự án, đảm bảo sản phẩm cuối
-                  cùng đáp ứng đúng nhu cầu và mong đợi của khách hàng
+                  Làm việc trực tiếp với khách hàng (NXB Quân Đội Nhân Dân) để
+                  tiếp nhận yêu cầu và đảm bảo chất lượng bàn giao
                 </li>
                 <li>
-                  Phát triển phần mềm TrueVoiceAI để đẩy nhanh quá trình biên
-                  tập, thu âm và kiểm tra chất lượng sách audio, giúp tăng mạnh
-                  năng suất làm việc và đảm bảo chất lượng sản phẩm cuối cùng.
+                  Ứng dụng phần mềm tự phát triển TrueVoiceAI giúp tối ưu hóa
+                  tiến độ, đẩy nhanh tốc độ thu âm và kiểm thử sản phẩm
                 </li>
                 <li>
-                  Dự toán các công việc cần thực hiện, thời gian hoàn thành và
-                  nguồn lực cần thiết. Lập kế hoạch chi tiết cho từng giai đoạn
-                  của dự án, từ thu âm, biên tập đến kiểm tra chất lượng và bàn
-                  giao sản phẩm cuối cùng
-                </li>
-                <li>
-                  Quản lý và phân công công việc cho đội ngũ nhân sự và cộng tác
-                  viên, đảm bảo tiến độ dự án được duy trì và hoàn thành đúng
-                  hạn
+                  Chịu trách nhiệm lập kế hoạch, dự toán ngân sách/nguồn lực,
+                  phân công và giám sát tiến độ của đội ngũ cộng tác viên
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
               <div class="item-header">
                 <strong
@@ -472,17 +470,17 @@
               </p>
               <ul class="details-list">
                 <li>
-                  Quản lý và phân công công việc sắp xếp nội dung cho các cộng
-                  tác viên.
+                  Quản lý, điều phối công việc và chuẩn hóa dữ liệu đầu vào cho
+                  đội ngũ cộng tác viên
                 </li>
                 <li>
-                  Xây dựng các tool tự động để phục vụ quá trình thống kê giúp
-                  giảm đáng kể thời gian và công sức so với làm thủ công, đồng
-                  thời đảm bảo độ chính xác cao trong việc sắp xếp và phân loại
-                  tài liệu.
+                  Xây dựng các công cụ tự động hóa (Automation Tools) giúp
+                  **giảm 40% thời gian** xử lý dữ liệu thủ công so với thông
+                  thường
                 </li>
               </ul>
             </div>
+
             <div class="content-item">
               <div class="item-header">
                 <strong>Xây dựng chỉnh sửa các website nhà xuất bản</strong>
@@ -490,11 +488,13 @@
               <p class="item-date">9/2024 - nay</p>
               <p class="item-role">Lập trình viên Frontend</p>
               <ul class="details-list">
-                <li>Xây dựng giao diện website các nhà xuất bản</li>
                 <li>
-                  Đối chiếu giao diện trên figma với website thực tế, chỉnh sửa,
-                  cập nhật nội dung, hình ảnh, đảm bảo tính nhất quán và thẩm mỹ
-                  của website.
+                  Xây dựng và tối ưu giao diện Responsive cho hệ thống website
+                  thuộc các nhà xuất bản
+                </li>
+                <li>
+                  Đảm bảo độ chính xác cao (Pixel-perfect) khi chuyển đổi giao
+                  diện từ thiết kế Figma sang mã nguồn thực tế
                 </li>
               </ul>
             </div>
