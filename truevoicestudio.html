@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrueVoiceStudio - Giới thiệu sản phẩm</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #1a1a2e;
+        background: #f8f9fc;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        padding: 0 40px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: box-shadow 0.3s;
+      }
+      .navbar.scrolled {
+        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 20px;
+        color: #4361ee;
+      }
+      .navbar-brand img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+      }
+      .navbar-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .navbar-links a {
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+        transition: color 0.2s;
+        position: relative;
+      }
+      .navbar-links a:hover {
+        color: #4361ee;
+      }
+      .navbar-cta {
+        padding: 10px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        background: linear-gradient(135deg, #4361ee, #3a0ca3);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .navbar-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(67, 97, 238, 0.35);
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          160deg,
+          #0f0c29 0%,
+          #302b63 50%,
+          #24243e 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding: 100px 40px 80px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -30%;
+        width: 900px;
+        height: 900px;
+        background: radial-gradient(
+          circle,
+          rgba(67, 97, 238, 0.25) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -40%;
+        left: -20%;
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(
+          circle,
+          rgba(114, 9, 183, 0.2) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+      }
+      .hero-text {
+        flex: 1;
+      }
+      .hero-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 50px;
+        background: rgba(67, 97, 238, 0.2);
+        color: #7b8cff;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+      }
+      .hero-text h1 {
+        font-size: 52px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .hero-text h1 span {
+        background: linear-gradient(135deg, #4cc9f0, #4361ee, #7209b7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-text p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 520px;
+        margin-bottom: 36px;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 15px;
+        background: linear-gradient(135deg, #4361ee, #7209b7);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(67, 97, 238, 0.4);
+      }
+      .btn-outline {
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 15px;
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: #4361ee;
+        background: rgba(67, 97, 238, 0.1);
+      }
+      .hero-image {
+        flex: 1;
+        max-width: 560px;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-image .screenshot-placeholder {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* ===== STATS BAR ===== */
+      .stats-bar {
+        background: #fff;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        border-bottom: 1px solid #eee;
+      }
+      .stat-item {
+        text-align: center;
+      }
+      .stat-number {
+        font-size: 36px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #4361ee, #7209b7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .stat-label {
+        font-size: 14px;
+        color: #777;
+        margin-top: 4px;
+        font-weight: 500;
+      }
+
+      /* ===== SECTIONS COMMON ===== */
+      .section {
+        padding: 100px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .section-tag {
+        display: inline-block;
+        padding: 6px 18px;
+        border-radius: 50px;
+        background: #eef0ff;
+        color: #4361ee;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .section-header h2 {
+        font-size: 40px;
+        font-weight: 800;
+        color: #1a1a2e;
+        margin-bottom: 16px;
+      }
+      .section-header p {
+        font-size: 17px;
+        color: #666;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* ===== FEATURES GRID ===== */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .feature-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 36px;
+        border: 1px solid #eee;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+      }
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4361ee, #7209b7);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .feature-card:hover::before {
+        opacity: 1;
+      }
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      .fi-tts {
+        background: #eef0ff;
+      }
+      .fi-script {
+        background: #fef3e2;
+      }
+      .fi-audio {
+        background: #e8f8f0;
+      }
+      .fi-account {
+        background: #fce8ef;
+      }
+      .fi-payment {
+        background: #e8f0fe;
+      }
+      .fi-ux {
+        background: #f3e8fe;
+      }
+      .feature-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1a1a2e;
+      }
+      .feature-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.7;
+      }
+
+      /* ===== SHOWCASE (Feature Detail) ===== */
+      .showcase {
+        padding: 80px 40px;
+      }
+      .showcase-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .showcase-row {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 100px;
+      }
+      .showcase-row.reverse {
+        flex-direction: row-reverse;
+      }
+      .showcase-text {
+        flex: 1;
+      }
+      .showcase-text .showcase-tag {
+        display: inline-block;
+        padding: 5px 14px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+      .tag-blue {
+        background: #eef0ff;
+        color: #4361ee;
+      }
+      .tag-orange {
+        background: #fef3e2;
+        color: #e67e22;
+      }
+      .tag-green {
+        background: #e8f8f0;
+        color: #27ae60;
+      }
+      .tag-pink {
+        background: #fce8ef;
+        color: #e74c8b;
+      }
+      .tag-purple {
+        background: #f3e8fe;
+        color: #7209b7;
+      }
+      .tag-teal {
+        background: #e0f7fa;
+        color: #00838f;
+      }
+      .showcase-text h3 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1a1a2e;
+        margin-bottom: 16px;
+        line-height: 1.3;
+      }
+      .showcase-text p {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 12px;
+      }
+      .showcase-text ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 16px;
+      }
+      .showcase-text ul li {
+        font-size: 14px;
+        color: #444;
+        padding: 8px 0;
+        padding-left: 28px;
+        position: relative;
+      }
+      .showcase-text ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #eef0ff;
+        color: #4361ee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .showcase-image {
+        flex: 1;
+        max-width: 560px;
+      }
+      .screenshot-placeholder {
+        background: linear-gradient(135deg, #e8ecf4 0%, #d5dbe8 100%);
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        position: relative;
+      }
+      .screenshot-placeholder img {
+        width: 100%;
+        display: block;
+      }
+      .screenshot-placeholder .placeholder-content {
+        padding: 60px 40px;
+        text-align: center;
+        color: #888;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .placeholder-icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+        opacity: 0.5;
+      }
+      .placeholder-label {
+        background: rgba(0, 0, 0, 0.06);
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 8px;
+        font-size: 12px;
+        color: #999;
+        margin-top: 8px;
+      }
+
+      /* ===== PRICING ===== */
+      .pricing-section {
+        background: linear-gradient(
+          160deg,
+          #0f0c29 0%,
+          #302b63 50%,
+          #24243e 100%
+        );
+        padding: 100px 40px;
+      }
+      .pricing-section .section-header h2 {
+        color: #fff;
+      }
+      .pricing-section .section-header p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .pricing-section .section-tag {
+        background: rgba(67, 97, 238, 0.2);
+        color: #7b8cff;
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .pricing-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 36px 28px;
+        text-align: center;
+        transition:
+          transform 0.3s,
+          border-color 0.3s;
+        position: relative;
+      }
+      .pricing-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(67, 97, 238, 0.4);
+      }
+      .pricing-card.popular {
+        border-color: #4361ee;
+        background: rgba(67, 97, 238, 0.1);
+      }
+      .pricing-card.popular::before {
+        content: "⭐ Phổ biến";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #4361ee, #7209b7);
+        color: #fff;
+        padding: 4px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .pricing-card h4 {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .pricing-card .pricing-desc {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      .pricing-price {
+        font-size: 40px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .pricing-price .currency {
+        font-size: 20px;
+        vertical-align: top;
+      }
+      .pricing-price .suffix {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .pricing-period {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 24px;
+      }
+      .pricing-features {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 28px;
+      }
+      .pricing-features li {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 6px 0;
+        padding-left: 24px;
+        position: relative;
+      }
+      .pricing-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #4cc9f0;
+        font-weight: 700;
+      }
+      .pricing-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .pricing-btn:hover {
+        border-color: #4361ee;
+        background: rgba(67, 97, 238, 0.2);
+      }
+      .pricing-card.popular .pricing-btn {
+        background: linear-gradient(135deg, #4361ee, #7209b7);
+        border-color: transparent;
+      }
+
+      /* ===== SCREENSHOT GALLERY ===== */
+      .gallery-section {
+        background: #fff;
+        padding: 100px 40px;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .gallery-item {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #eee;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        cursor: pointer;
+      }
+      .gallery-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+      }
+      .gallery-item .screenshot-placeholder {
+        border-radius: 0;
+        border: none;
+      }
+      .gallery-caption {
+        padding: 16px 20px;
+        background: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+      }
+
+      /* ===== CTA ===== */
+      .cta-section {
+        padding: 100px 40px;
+        text-align: center;
+        background: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+      }
+      .cta-section h2 {
+        font-size: 40px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .cta-section p {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 560px;
+        margin: 0 auto 36px;
+      }
+      .cta-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        border-radius: 14px;
+        background: #fff;
+        color: #4361ee;
+        font-weight: 800;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: #0f0c29;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 60px 40px 30px;
+      }
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .footer-brand h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .footer-brand p {
+        font-size: 14px;
+        max-width: 320px;
+      }
+      .footer-links h4 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .footer-links ul {
+        list-style: none;
+      }
+      .footer-links li {
+        margin-bottom: 8px;
+      }
+      .footer-links a {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: #4cc9f0;
+      }
+      .footer-bottom {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        font-size: 13px;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 1024px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-text p {
+          margin: 0 auto 36px;
+        }
+        .hero-buttons {
+          justify-content: center;
+        }
+        .hero-image {
+          max-width: 480px;
+        }
+        .showcase-row,
+        .showcase-row.reverse {
+          flex-direction: column;
+        }
+        .showcase-image {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar-links {
+          display: none;
+        }
+        .hero-text h1 {
+          font-size: 36px;
+        }
+        .section-header h2 {
+          font-size: 30px;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-bar {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .footer-content {
+          flex-direction: column;
+        }
+      }
+
+      /* ===== ANIMATIONS ===== */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="navbar-brand">
+        <img src="./images/logo.png" alt="Logo" />
+        TrueVoiceStudio
+      </a>
+      <ul class="navbar-links">
+        <li><a href="#features">Tính năng</a></li>
+        <li><a href="#showcase">Chi tiết</a></li>
+        <li><a href="#pricing">Gói cước</a></li>
+        <li><a href="#gallery">Ảnh chụp</a></li>
+      </ul>
+      <a href="#pricing">
+        <button class="navbar-cta">Xem gói cước</button>
+      </a>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">🎙️ Phiên bản 1.3.2</div>
+          <h1>
+            Chuyển văn bản thành<br />
+            <span>giọng nói chuyên nghiệp</span>
+          </h1>
+          <p>
+            TrueVoiceStudio — Ứng dụng Desktop mạnh mẽ hỗ trợ chuyển đổi
+            Text-to-Speech với hàng trăm giọng đọc tự nhiên, xử lý kịch bản
+            thông minh & xuất audio chất lượng cao.
+          </p>
+          <div class="hero-buttons">
+            <a href="#pricing">
+              <button class="btn-primary">Xem gói cước →</button>
+            </a>
+            <a href="#features">
+              <button class="btn-outline">Khám phá tính năng →</button>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="screenshot-placeholder">
+            <img
+              src="images/tvs-intro.jpg"
+              alt="TrueVoiceStudio - Giao diện chính"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <div class="stats-bar fade-in">
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Giọng đọc AI</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Đa dạng</div>
+        <div class="stat-label">Nhà cung cấp (Google Cloud, Vbee...)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Ngôn ngữ hỗ trợ</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">.mp3</div>
+        <div class="stat-label">Xuất audio chất lượng cao</div>
+      </div>
+    </div>
+
+    <!-- ===== FEATURES OVERVIEW ===== -->
+    <section class="section" id="features">
+      <div class="section-header fade-in">
+        <div class="section-tag">Tính năng</div>
+        <h2>Mọi thứ bạn cần trong một ứng dụng</h2>
+        <p>
+          TrueVoiceStudio cung cấp bộ công cụ toàn diện cho nhà sáng tạo nội
+          dung: từ chuyển đổi giọng nói, xử lý kịch bản, đến xuất audio chuyên
+          nghiệp.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-tts">🎤</div>
+          <h3>Chuyển văn bản thành giọng nói</h3>
+          <p>
+            Hỗ trợ hàng trăm giọng đọc AI từ nhiều nhà cung cấp hàng đầu. Gán
+            giọng riêng cho từng nhân vật, tùy chỉnh tốc độ và cảm xúc dễ dàng.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-script">📝</div>
+          <h3>Xử lý kịch bản thông minh</h3>
+          <p>
+            Tự động ngắt đoạn cho văn bản dài (> 2500 ký tự). Đọc hàng loạt từ
+            file Word (.docx), xuất ra định dạng .docx hoặc .xlsx.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-audio">🎵</div>
+          <h3>Xử lý âm thanh đa phương tiện</h3>
+          <p>
+            Xuất file MP3 chất lượng cao. Lồng ghép nhạc nền vào giọng đọc với
+            FFmpeg — tùy chỉnh fade in/out và âm lượng.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-account">👤</div>
+          <h3>Quản lý tài khoản & gói cước</h3>
+          <p>
+            Đăng nhập/đăng ký bảo mật qua Firebase. Phân chia cấp bậc Demo,
+            Premium, VIP với giới hạn ký tự linh hoạt.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-payment">💳</div>
+          <h3>Thanh toán tự động VietQR</h3>
+          <p>
+            Quét mã QR để nâng cấp tài khoản. Trạng thái thanh toán cập nhật
+            real-time, không cần khởi động lại ứng dụng.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon fi-ux">✨</div>
+          <h3>Trải nghiệm UX/UI mượt mà</h3>
+          <p>
+            Tự động lưu dự án gần nhất, auto-updater thông báo phiên bản mới,
+            giao diện trực quan & dễ sử dụng.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHOWCASE DETAIL ===== -->
+    <div class="showcase" id="showcase">
+      <div class="showcase-inner">
+        <!-- Feature 1: TTS -->
+        <div class="showcase-row fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-blue">Text-to-Speech</div>
+            <h3>Giọng đọc AI đa dạng & tự nhiên</h3>
+            <p>
+              Chọn từ hàng trăm giọng đọc nam/nữ từ nhiều nhà cung cấp hàng đầu
+              như Google Cloud, Vbee và nhiều hơn nữa. Lọc theo ngôn ngữ, giới
+              tính và nghe thử trước khi sử dụng.
+            </p>
+            <ul>
+              <li>Hỗ trợ giọng Tiếng Việt, Tiếng Anh và nhiều ngôn ngữ khác</li>
+              <li>Gán giọng đọc riêng cho từng nhân vật trong kịch bản</li>
+              <li>Tùy chỉnh tốc độ đọc linh hoạt (0.75x — 1.5x)</li>
+              <li>Nghe thử giọng đọc trực tiếp trên ứng dụng</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img src="images/tvs-voice.jpg" alt="Chọn giọng đọc" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Script Processing -->
+        <div class="showcase-row reverse fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-orange">Kịch bản</div>
+            <h3>Chế độ tách đoạn thông minh</h3>
+            <p>
+              Chia kịch bản dài thành từng đoạn nhỏ, gán giọng đọc và tốc độ
+              riêng cho mỗi đoạn. Chỉnh sửa trực tiếp trên giao diện, hỗ trợ tìm
+              kiếm & thay thế nhanh.
+            </p>
+            <ul>
+              <li>Tự động chia nhỏ văn bản dài hơn 2,500 ký tự</li>
+              <li>Gán giọng đọc khác nhau cho từng đoạn (chế độ đa giọng)</li>
+              <li>Import kịch bản từ file Word (.docx)</li>
+              <li>Xuất dữ liệu ra .docx hoặc .xlsx (Excel)</li>
+              <li>Quản lý từ viết tắt với bộ từ điển JSON</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img src="images/tvs-split-mode.jpg" alt="Chế độ tách đoạn" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Project Management -->
+        <div class="showcase-row fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-green">Quản lý dự án</div>
+            <h3>Quản lý dự án & chương một cách chuyên nghiệp</h3>
+            <p>
+              Tạo, chỉnh sửa, xóa và import/export dự án dễ dàng. Mỗi dự án chứa
+              nhiều chương (chapter) với trạng thái theo dõi chi tiết.
+            </p>
+            <ul>
+              <li>Hàng chờ xử lý đa dự án song song</li>
+              <li>Theo dõi trạng thái: Chờ xử lý → Đang xử lý → Hoàn thành</li>
+              <li>Import dự án từ file JSON</li>
+              <li>Export dự án để sao lưu hoặc chia sẻ</li>
+              <li>Tự động lưu & khôi phục dự án khi khởi động lại</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img
+                src="images/tvs-project-management.jpg"
+                alt="Quản lý dự án"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Audio & Background Music -->
+        <div class="showcase-row reverse fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-teal">Âm thanh</div>
+            <h3>Lồng ghép nhạc nền chuyên nghiệp</h3>
+            <p>
+              Thêm nhạc nền vào giọng đọc với tùy chỉnh chi tiết: fade in/out,
+              âm lượng, thời điểm bắt đầu/kết thúc — tất cả được xử lý bằng
+              FFmpeg.
+            </p>
+            <ul>
+              <li>Xuất file MP3 chất lượng cao</li>
+              <li>Tùy chỉnh fade in/out cho nhạc nền</li>
+              <li>Điều chỉnh âm lượng nhạc nền chi tiết</li>
+              <li>
+                Ghi âm lại từng đoạn riêng lẻ mà không cần xử lý lại toàn bộ
+              </li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img src="images/tvs-bg-music.jpg" alt="Nhạc nền" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5: Search & Replace -->
+        <div class="showcase-row fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-purple">Tìm kiếm & Thay thế</div>
+            <h3>Tìm kiếm & chỉnh sửa nhanh chóng</h3>
+            <p>
+              Công cụ tìm kiếm và thay thế mạnh mẽ tích hợp sẵn, giúp bạn chỉnh
+              sửa kịch bản nhanh gọn — hỗ trợ cả chế độ toàn văn lẫn chế độ tách
+              đoạn.
+            </p>
+            <ul>
+              <li>Tìm kiếm text với đánh dấu highlight kết quả</li>
+              <li>Điều hướng giữa các kết quả tìm kiếm (trước / tiếp)</li>
+              <li>Thay thế đơn lẻ hoặc thay thế tất cả</li>
+              <li>Hoạt động trên cả chế độ Full-text và Split</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img
+                src="images/tvs-find-replace.jpg"
+                alt="Tìm kiếm & Thay thế"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6: Payment -->
+        <div class="showcase-row reverse fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-pink">Thanh toán</div>
+            <h3>Thanh toán tự động qua VietQR</h3>
+            <p>
+              Nâng cấp tài khoản dễ dàng bằng cách quét mã QR thanh toán. Hệ
+              thống tự động xác nhận giao dịch và cập nhật quyền lợi ngay lập
+              tức.
+            </p>
+            <ul>
+              <li>Tạo mã QR thanh toán tự động với nội dung chuyển khoản</li>
+              <li>Xác nhận thanh toán real-time — không cần reload</li>
+              <li>Nhiều gói cước linh hoạt: Premium, VIP, mua thêm ký tự</li>
+              <li>Hiển thị chi tiết thông tin ngân hàng & mã giao dịch</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img src="images/tvs-cart.jpg" alt="Thanh toán VietQR" />
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-row fade-in">
+          <div class="showcase-text">
+            <div class="showcase-tag tag-pink">Thư viện</div>
+            <h3>Thư viện từ ngữ hỗ trợ biên tập</h3>
+            <p>
+              Sử dụng thư viện cho phép thay thế các từ viết tắt, từ nước ngoài
+              nhanh chóng và tiện lợi
+            </p>
+            <ul>
+              <li>Thêm mới dễ dàng từ viết tắt</li>
+              <li>Cung cấp 2 loại từ: Từ độc lập và Ký tự chung</li>
+              <li>Từ độc lập là loại từ đứng riêng độc lập</li>
+              <li>Ký tự chung là những ký tự viết tắt như "-ct/tw"</li>
+            </ul>
+          </div>
+          <div class="showcase-image">
+            <div class="screenshot-placeholder">
+              <img src="images/tvs-library.jpg" alt="Thanh toán VietQR" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing-section" id="pricing">
+      <div class="section-header fade-in">
+        <div class="section-tag">Gói cước</div>
+        <h2>Chọn gói phù hợp với nhu cầu</h2>
+        <p>
+          Bắt đầu miễn phí, nâng cấp khi cần — không ràng buộc, không phí ẩn.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card fade-in">
+          <h4>Dùng thử</h4>
+          <p class="pricing-desc">Khám phá cơ bản</p>
+          <div class="pricing-price">Miễn phí</div>
+          <div class="pricing-period">Vĩnh viễn</div>
+          <ul class="pricing-features">
+            <li>1 thiết bị đăng nhập</li>
+            <li>1 dự án chạy song song</li>
+            <li>Giới hạn ký tự cơ bản</li>
+            <li>Giọng đọc từ nhiều nhà cung cấp</li>
+          </ul>
+          <button class="pricing-btn">Bắt đầu miễn phí</button>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <h4>Premium</h4>
+          <p class="pricing-desc">Cho nhà sáng tạo</p>
+          <div class="pricing-price">—</div>
+          <div class="pricing-period">Vĩnh viễn</div>
+          <ul class="pricing-features">
+            <li>2 thiết bị đăng nhập</li>
+            <li>2 dự án chạy song song</li>
+            <li>Nhiều ký tự hơn mỗi dự án</li>
+            <li>Toàn bộ giọng đọc Premium</li>
+          </ul>
+          <button class="pricing-btn">Nâng cấp Premium</button>
+        </div>
+
+        <div class="pricing-card popular fade-in">
+          <h4>VIP</h4>
+          <p class="pricing-desc">Không giới hạn</p>
+          <div class="pricing-price">—</div>
+          <div class="pricing-period">Vĩnh viễn</div>
+          <ul class="pricing-features">
+            <li>3 thiết bị đăng nhập</li>
+            <li>3 dự án chạy song song</li>
+            <li>Ký tự tối đa lớn nhất</li>
+            <li>Ưu tiên hỗ trợ kỹ thuật</li>
+          </ul>
+          <button class="pricing-btn">Nâng cấp VIP</button>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <h4>Mua thêm ký tự</h4>
+          <p class="pricing-desc">Gói bổ sung</p>
+          <div class="pricing-price">—</div>
+          <div class="pricing-period">Theo gói</div>
+          <ul class="pricing-features">
+            <li>Thêm ký tự vào tài khoản</li>
+            <li>Không thay đổi gói cước hiện tại</li>
+            <li>Áp dụng cho mọi cấp bậc</li>
+            <li>Cộng dồn không giới hạn</li>
+          </ul>
+          <button class="pricing-btn">Mua thêm ký tự</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREENSHOT GALLERY ===== -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-header fade-in">
+        <div class="section-tag">Gallery</div>
+        <h2>Ảnh chụp màn hình ứng dụng</h2>
+        <p>
+          Khám phá giao diện và các tính năng của TrueVoiceStudio qua ảnh chụp
+          thực tế.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img src="./images/tvs-login.jpg" alt="Login" />
+          </div>
+          <div class="gallery-caption">Đăng nhập & Đăng ký</div>
+        </div>
+
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img
+              src="images/tvs-intro.jpg"
+              alt="TrueVoiceStudio - Giao diện chính"
+            />
+          </div>
+          <div class="gallery-caption">Trang tổng quan</div>
+        </div>
+
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img
+              src="images/tvs-project-management.jpg"
+              alt="TrueVoiceStudio - Giao diện chính"
+            />
+          </div>
+          <div class="gallery-caption">Danh sách dự án</div>
+        </div>
+
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img
+              src="images/tvs-editor.jpg"
+              alt="TrueVoiceStudio - chỉnh sửa"
+            />
+          </div>
+          <div class="gallery-caption">Soạn thảo kịch bản</div>
+        </div>
+
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img src="images/tvs-voice.jpg" alt="" />
+          </div>
+          <div class="gallery-caption">Chọn giọng đọc</div>
+        </div>
+
+        <div class="gallery-item fade-in">
+          <div class="screenshot-placeholder">
+            <img src="images/tvs-cart.jpg" alt="" />
+          </div>
+          <div class="gallery-caption">Thanh toán nâng cấp</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <h2>Sẵn sàng tạo giọng đọc chuyên nghiệp?</h2>
+      <p>
+        Chọn gói cước phù hợp và bắt đầu hành trình sáng tạo nội dung của bạn
+        ngay hôm nay.
+      </p>
+      <a href="#pricing">
+        <button class="cta-btn">Xem gói cước & Đăng ký</button>
+      </a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>🎙️ TrueVoiceStudio</h3>
+          <p>
+            Công cụ chuyển đổi văn bản thành giọng nói chất lượng cao dành cho
+            nhà sáng tạo nội dung Việt Nam.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="#features">Tính năng</a></li>
+            <li><a href="#pricing">Gói cước</a></li>
+            <li><a href="#gallery">Ảnh chụp màn hình</a></li>
+            <li><a href="#pricing">Bảng giá</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/hoangduchai182/true-voice-studio-release"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/hoangduchai182/true-voice-studio-release/issues"
+                target="_blank"
+                >Báo lỗi</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/hoangduchai182/true-voice-studio-release/releases"
+                target="_blank"
+                >Lịch sử cập nhật</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Tác giả</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/hoangduchai182" target="_blank"
+                >haitemobi</a
+              >
+            </li>
+            <li><a>hoangduchai182</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 TrueVoiceStudio by haitemobi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 20);
+      });
+
+      // Fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -40px 0px",
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
