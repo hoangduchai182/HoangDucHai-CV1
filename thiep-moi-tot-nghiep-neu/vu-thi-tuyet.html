@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thư mời dự lễ tốt nghiệp tại Đại học Kinh tế Quốc dân"
+    />
+    <meta name="theme-color" content="#07131f" />
+    <title>Thư mời tốt nghiệp · Vũ Thị Tuyết | NEU</title>
+
+    <style>
+      @font-face {
+        font-family: "Be Vietnam Pro";
+        src: url("assets/fonts/be-vietnam-pro-400.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Be Vietnam Pro";
+        src: url("assets/fonts/be-vietnam-pro-700.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Lora";
+        src: url("assets/fonts/lora-400.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Lora";
+        src: url("assets/fonts/lora-500.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Lora";
+        src: url("assets/fonts/lora-italic-400.ttf") format("truetype");
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      :root {
+        --navy-950: #040b12;
+        --navy-900: #07131f;
+        --navy-800: #0b2033;
+        --paper: #f7f1e4;
+        --paper-soft: rgba(247, 241, 228, 0.76);
+        --gold: #e8c77b;
+        --gold-light: #fff0bd;
+        --red: #a5152c;
+        --line: rgba(232, 199, 123, 0.28);
+        --glass: rgba(5, 15, 25, 0.68);
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+        --serif: "Lora", Georgia, "Times New Roman", serif;
+        --sans:
+          "Be Vietnam Pro", ui-sans-serif, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background: var(--navy-950);
+      }
+
+      body {
+        margin: 0;
+        color: var(--paper);
+        background:
+          radial-gradient(
+            circle at 15% 12%,
+            rgba(38, 94, 126, 0.3),
+            transparent 26rem
+          ),
+          radial-gradient(
+            circle at 88% 70%,
+            rgba(165, 21, 44, 0.17),
+            transparent 28rem
+          ),
+          var(--navy-950);
+        font-family: var(--sans);
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 100;
+        padding: 0.75rem 1rem;
+        color: var(--navy-950);
+        background: var(--gold-light);
+        border-radius: 0.5rem;
+        transform: translateY(-180%);
+        transition: transform 180ms ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .progress {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 50;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .progress__bar {
+        display: block;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, var(--red), var(--gold-light));
+        box-shadow: 0 0 18px var(--gold);
+      }
+
+      .site-nav {
+        position: fixed;
+        inset: 3px 0 auto;
+        z-index: 45;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(4, 11, 18, 0.78);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.16);
+        backdrop-filter: blur(18px) saturate(130%);
+      }
+
+      .site-nav__inner {
+        display: flex;
+        align-items: center;
+        width: min(1280px, 100%);
+        min-height: 4rem;
+        margin-inline: auto;
+        padding-inline: clamp(1rem, 4vw, 3rem);
+      }
+
+      .site-nav__brand {
+        flex: 0 0 auto;
+        margin-right: clamp(1rem, 4vw, 3rem);
+        color: var(--gold-light);
+        font-family: var(--serif);
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+      }
+
+      .site-nav__links {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        gap: 0.35rem;
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+        list-style: none;
+      }
+
+      .site-nav__links::-webkit-scrollbar {
+        display: none;
+      }
+
+      .site-nav__link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.5rem;
+        padding: 0.65rem 0.8rem;
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.56);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition:
+          color 180ms ease,
+          background 180ms ease;
+      }
+
+      .site-nav__link:hover,
+      .site-nav__link:focus-visible {
+        color: var(--paper);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .site-nav__link.is-active {
+        color: var(--navy-950);
+        background: var(--gold-light);
+        box-shadow: 0 0 20px rgba(232, 199, 123, 0.14);
+      }
+
+      .section {
+        position: relative;
+        isolation: isolate;
+        min-height: 68svh;
+        display: grid;
+        align-items: center;
+        padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 6rem);
+        overflow: hidden;
+        scroll-margin-top: 4rem;
+      }
+
+      .section + .section {
+        margin-top: clamp(2rem, 8vw, 8rem);
+      }
+
+      .section::after {
+        content: "";
+        position: absolute;
+        inset: auto 8vw 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--line),
+          transparent
+        );
+      }
+
+      .section__inner {
+        width: min(1160px, 100%);
+        margin-inline: auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 0 1.25rem;
+        color: var(--gold-light);
+        font-size: 0.72rem;
+        font-weight: 750;
+        letter-spacing: 0.24em;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 2.5rem;
+        height: 1px;
+        background: currentColor;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      .quote {
+        font-family: var(--serif);
+      }
+
+      h1 {
+        max-width: 900px;
+        margin-bottom: 1.5rem;
+        font-size: clamp(3rem, 8.8vw, 8.5rem);
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        line-height: 0.94;
+        text-wrap: balance;
+      }
+
+      h2 {
+        max-width: 780px;
+        margin-bottom: 1.5rem;
+        font-size: clamp(2.4rem, 5vw, 5.8rem);
+        font-weight: 500;
+        letter-spacing: -0.045em;
+        line-height: 1;
+        text-wrap: balance;
+      }
+
+      .lead {
+        max-width: 700px;
+        color: var(--paper-soft);
+        font-size: clamp(1rem, 1.6vw, 1.25rem);
+        line-height: 1.85;
+      }
+
+      .gold {
+        color: var(--gold-light);
+        text-shadow: 0 0 32px rgba(255, 225, 151, 0.18);
+      }
+
+      .hero {
+        min-height: 100svh;
+        text-align: center;
+        background-image:
+          linear-gradient(180deg, rgba(2, 7, 12, 0.42), rgba(2, 7, 12, 0.94)),
+          linear-gradient(
+            90deg,
+            rgba(5, 14, 23, 0.6),
+            transparent 50%,
+            rgba(5, 14, 23, 0.6)
+          ),
+          url("assets/neu-a2-entrance.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 1.5rem;
+        z-index: -1;
+        border: 1px solid rgba(255, 240, 189, 0.3);
+        pointer-events: none;
+      }
+
+      .hero__inner {
+        display: grid;
+        justify-items: center;
+      }
+
+      .hero__mark {
+        display: grid;
+        place-items: center;
+        width: 5.5rem;
+        aspect-ratio: 1;
+        margin-bottom: 2.5rem;
+        border: 1px solid rgba(255, 240, 189, 0.55);
+        border-radius: 50%;
+        color: var(--gold-light);
+        background: rgba(4, 11, 18, 0.42);
+        box-shadow: inset 0 0 32px rgba(232, 199, 123, 0.09);
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        letter-spacing: 0.14em;
+      }
+
+      .hero .lead {
+        margin-inline: auto;
+      }
+
+      .hero__meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.7rem 2rem;
+        margin: 2.4rem 0 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero__meta span + span::before {
+        content: "✦";
+        margin-right: 2rem;
+        color: var(--gold);
+      }
+
+      .scroll-cue {
+        position: absolute;
+        bottom: 2.8rem;
+        left: 50%;
+        display: grid;
+        justify-items: center;
+        gap: 0.55rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+      }
+
+      .scroll-cue::after {
+        content: "";
+        width: 1px;
+        height: 2.5rem;
+        background: linear-gradient(var(--gold-light), transparent);
+        animation: breathe 1.8s ease-in-out infinite;
+      }
+
+      .story {
+        background:
+          radial-gradient(
+            circle at 82% 20%,
+            rgba(26, 75, 102, 0.35),
+            transparent 32rem
+          ),
+          var(--navy-950);
+      }
+
+      .story__grid,
+      .graduate__grid,
+      .details__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+        gap: clamp(3rem, 8vw, 8rem);
+        align-items: center;
+      }
+
+      .quote {
+        margin: 0;
+        color: var(--gold-light);
+        font-size: clamp(1.8rem, 3.6vw, 3.5rem);
+        font-style: italic;
+        line-height: 1.3;
+      }
+
+      .chapter-no {
+        display: block;
+        margin-bottom: 1.25rem;
+        color: rgba(232, 199, 123, 0.38);
+        font-family: var(--serif);
+        font-size: clamp(4rem, 10vw, 8rem);
+        line-height: 0.8;
+      }
+
+      .graduate {
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(3, 10, 17, 0.97) 0%,
+            rgba(3, 10, 17, 0.85) 48%,
+            rgba(3, 10, 17, 0.36)
+          ),
+          url("assets/neu-a2-campus.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .graduate__card {
+        padding: clamp(1.6rem, 4vw, 3.2rem);
+        border: 1px solid var(--line);
+        border-radius: 1.5rem;
+        background: linear-gradient(
+          145deg,
+          rgba(9, 25, 39, 0.84),
+          rgba(4, 11, 18, 0.56)
+        );
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .graduate__name {
+        margin: 0.25rem 0 1.25rem;
+        color: var(--gold-light);
+        font-family: var(--serif);
+        font-size: clamp(2.3rem, 4vw, 4.7rem);
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .graduate__facts {
+        display: grid;
+        gap: 1rem;
+        margin: 2rem 0 0;
+      }
+
+      .fact {
+        display: grid;
+        grid-template-columns: 7.5rem 1fr;
+        gap: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.11);
+      }
+
+      .fact dt {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.72rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .fact dd {
+        margin: 0;
+        color: var(--paper);
+        line-height: 1.55;
+      }
+
+      .details {
+        background:
+          radial-gradient(
+            circle at 8% 90%,
+            rgba(165, 21, 44, 0.17),
+            transparent 30rem
+          ),
+          var(--navy-900);
+      }
+
+      .details__list {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .detail-card {
+        display: grid;
+        grid-template-columns: 3.2rem 1fr;
+        gap: 1rem;
+        padding: 1.35rem;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .detail-card__icon {
+        display: grid;
+        place-items: center;
+        width: 3.2rem;
+        height: 3.2rem;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--gold-light);
+        font-family: var(--serif);
+        font-size: 1.25rem;
+      }
+
+      .detail-card h3 {
+        margin-bottom: 0.4rem;
+        color: var(--gold-light);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .detail-card p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.74);
+        line-height: 1.65;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 2rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.15rem;
+        padding: 0.85rem 1.35rem;
+        border: 1px solid var(--gold);
+        border-radius: 999px;
+        color: var(--navy-950);
+        background: var(--gold-light);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button--ghost {
+        color: var(--gold-light);
+        background: transparent;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(232, 199, 123, 0.18);
+      }
+
+      .timeline {
+        background-image:
+          linear-gradient(180deg, rgba(3, 10, 17, 0.89), rgba(3, 10, 17, 0.97)),
+          url("assets/neu-a2-architecture.webp");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .timeline__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: end;
+        margin-bottom: clamp(2.5rem, 6vw, 5rem);
+      }
+
+      .timeline__head .lead {
+        max-width: 460px;
+        margin-bottom: 0;
+      }
+
+      .timeline__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--line);
+      }
+
+      .timeline__item {
+        position: relative;
+        padding: 2.2rem 2rem 0;
+      }
+
+      .timeline__item + .timeline__item {
+        border-left: 1px solid var(--line);
+      }
+
+      .timeline__item::before {
+        content: "";
+        position: absolute;
+        top: -0.36rem;
+        left: 2rem;
+        width: 0.7rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--gold-light);
+        box-shadow: 0 0 18px var(--gold);
+      }
+
+      .timeline__time {
+        margin-bottom: 0.6rem;
+        color: var(--gold-light);
+        font-family: var(--serif);
+        font-size: 1.9rem;
+      }
+
+      .timeline__item h3 {
+        margin-bottom: 0.65rem;
+        font-size: 1rem;
+      }
+
+      .timeline__item p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        line-height: 1.65;
+      }
+
+      .gratitude {
+        min-height: 82svh;
+        text-align: center;
+        background:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(30, 80, 108, 0.26),
+            transparent 35rem
+          ),
+          var(--navy-950);
+      }
+
+      .gratitude .section__inner {
+        display: grid;
+        justify-items: center;
+      }
+
+      .gratitude__ornament {
+        margin-bottom: 1.8rem;
+        color: var(--gold);
+        font-size: 1.5rem;
+        letter-spacing: 0.65em;
+      }
+
+      .gratitude .lead {
+        max-width: 820px;
+        font-family: var(--serif);
+        font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+        line-height: 1.8;
+      }
+
+      .closing {
+        min-height: 100svh;
+        text-align: center;
+        background-image:
+          linear-gradient(180deg, rgba(3, 9, 15, 0.7), rgba(3, 9, 15, 0.94)),
+          url("assets/neu-a2-entrance.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .closing .section__inner {
+        display: grid;
+        justify-items: center;
+      }
+
+      .signature {
+        margin: 2.5rem 0 0;
+        color: var(--gold-light);
+        font-family: var(--serif);
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        font-style: italic;
+      }
+
+      .helper {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 30;
+      }
+
+      .helper summary {
+        display: grid;
+        place-items: center;
+        width: 2.7rem;
+        aspect-ratio: 1;
+        border: 1px solid rgba(255, 240, 189, 0.45);
+        border-radius: 50%;
+        color: var(--gold-light);
+        background: rgba(4, 11, 18, 0.8);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .helper summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .helper__panel {
+        position: absolute;
+        right: 0;
+        bottom: 3.3rem;
+        width: min(22rem, calc(100vw - 2rem));
+        padding: 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        color: rgba(255, 255, 255, 0.75);
+        background: rgba(4, 11, 18, 0.96);
+        box-shadow: var(--shadow);
+        font-size: 0.82rem;
+        line-height: 1.65;
+      }
+
+      .helper__panel strong {
+        color: var(--gold-light);
+      }
+
+      .helper__panel p:last-child {
+        margin-bottom: 0;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition:
+          opacity 800ms ease,
+          transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          opacity: 0.35;
+          transform: scaleY(0.75);
+          transform-origin: top;
+        }
+        50% {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+
+      @media (max-width: 840px) {
+        .site-nav__inner {
+          min-height: 3.7rem;
+          padding-inline: 0.8rem;
+        }
+
+        .site-nav__brand {
+          margin-right: 0.45rem;
+          font-size: 0.82rem;
+        }
+
+        .site-nav__link {
+          min-height: 2.35rem;
+          padding-inline: 0.68rem;
+          font-size: 0.61rem;
+        }
+
+        .story__grid,
+        .graduate__grid,
+        .details__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .graduate {
+          background-image:
+            linear-gradient(
+              180deg,
+              rgba(3, 10, 17, 0.72),
+              rgba(3, 10, 17, 0.98)
+            ),
+            url("assets/neu-a2-campus.png");
+          background-position: 62% center;
+        }
+
+        .timeline__head {
+          display: block;
+        }
+
+        .timeline__list {
+          grid-template-columns: 1fr;
+          border-top: 0;
+          border-left: 1px solid var(--line);
+        }
+
+        .timeline__item {
+          padding: 0 0 2.5rem 2rem;
+        }
+
+        .timeline__item + .timeline__item {
+          border-left: 0;
+        }
+
+        .timeline__item::before {
+          top: 0.45rem;
+          left: -0.36rem;
+        }
+
+        .hero__meta span + span::before {
+          content: none;
+        }
+
+        .hero__meta {
+          display: grid;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .section {
+          padding-inline: 1.25rem;
+        }
+
+        .hero::before {
+          inset: 0.75rem;
+        }
+
+        .fact {
+          grid-template-columns: 1fr;
+          gap: 0.35rem;
+        }
+
+        .button-row {
+          display: grid;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#noi-dung">Chuyển đến nội dung chính</a>
+    <div class="progress" aria-hidden="true">
+      <span class="progress__bar"></span>
+    </div>
+
+    <nav class="site-nav" aria-label="Mục lục thiệp">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="#mo-dau" aria-label="Về đầu thiệp"
+          >NEU</a
+        >
+        <ul class="site-nav__links">
+          <li>
+            <a
+              class="site-nav__link is-active"
+              href="#mo-dau"
+              aria-current="true"
+              >Mở đầu</a
+            >
+          </li>
+          <li><a class="site-nav__link" href="#cau-chuyen">Lời ngỏ</a></li>
+          <li><a class="site-nav__link" href="#tan-cu-nhan">Tân cử nhân</a></li>
+          <li><a class="site-nav__link" href="#thong-tin">Thông tin</a></li>
+          <li><a class="site-nav__link" href="#lich-trinh">Lịch trình</a></li>
+          <li><a class="site-nav__link" href="#cam-on">Cảm ơn</a></li>
+          <li><a class="site-nav__link" href="#hen-gap">Hẹn gặp</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="noi-dung">
+      <section class="section hero" id="mo-dau" aria-labelledby="hero-title">
+        <div class="section__inner hero__inner reveal">
+          <div class="hero__mark" aria-label="Đại học Kinh tế Quốc dân">
+            NEU
+          </div>
+          <p class="eyebrow">Graduation invitation · 2025</p>
+          <h1 id="hero-title">
+            Một cột mốc.<br /><span class="gold">Vạn lời biết ơn.</span>
+          </h1>
+          <p class="lead">
+            Sau những năm tháng miệt mài, ngày tôi khép lại một hành trình đẹp
+            đã đến. Sẽ thật trọn vẹn nếu khoảnh khắc ấy có bạn ở bên.
+          </p>
+          <div class="hero__meta" aria-label="Thông tin chính">
+            <span data-field="date">Thứ Bảy · 20.05.2025</span>
+            <span data-field="venue-short">Hội trường A2 · NEU</span>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#cau-chuyen">Khám phá</a>
+      </section>
+
+      <section
+        class="section story"
+        id="cau-chuyen"
+        aria-labelledby="story-title"
+      >
+        <div class="section__inner story__grid">
+          <div class="reveal">
+            <p class="eyebrow">Lời ngỏ</p>
+            <h2 id="story-title">
+              Ngày hôm nay được viết nên từ
+              <span class="gold">rất nhiều yêu thương.</span>
+            </h2>
+            <p class="lead">
+              Có những hành trình không chỉ được đo bằng năm tháng, mà bằng
+              những lần được nâng đỡ, những lời động viên đúng lúc và những
+              người đã kiên nhẫn đồng hành. Lễ tốt nghiệp này không chỉ là niềm
+              vui của riêng tôi — đó còn là lời cảm ơn dành cho tất cả những
+              trái tim đã cùng tôi đi qua tuổi trẻ.
+            </p>
+          </div>
+          <blockquote class="quote reveal">
+            <span class="chapter-no">01</span>
+            “Sự hiện diện của bạn sẽ khiến ký ức về ngày đặc biệt này sáng hơn
+            rất nhiều.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section
+        class="section graduate"
+        id="tan-cu-nhan"
+        aria-labelledby="graduate-title"
+      >
+        <div class="section__inner graduate__grid">
+          <div class="reveal">
+            <p class="eyebrow">Trân trọng kính mời</p>
+            <h2 id="graduate-title">Đến chung vui trong lễ tốt nghiệp của</h2>
+          </div>
+          <article
+            class="graduate__card reveal"
+            aria-label="Thông tin tân cử nhân"
+          >
+            <p class="eyebrow">Tân cử nhân</p>
+            <p class="graduate__name" data-field="name">Vũ Thị Tuyết</p>
+            <dl class="graduate__facts">
+              <div class="fact">
+                <dt>Chuyên ngành</dt>
+                <dd data-field="major">Khoa học máy tính</dd>
+              </div>
+              <div class="fact">
+                <dt>Trường</dt>
+                <dd data-field="school">Đại học Kinh tế Quốc dân</dd>
+              </div>
+              <div class="fact">
+                <dt>Niên khóa</dt>
+                <dd data-field="class-year">2021 — 2025</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section details"
+        id="thong-tin"
+        aria-labelledby="details-title"
+      >
+        <div class="section__inner details__grid">
+          <div class="reveal">
+            <p class="eyebrow">Hẹn gặp bạn</p>
+            <h2 id="details-title">
+              Một buổi sáng cho <span class="gold">những điều đáng nhớ.</span>
+            </h2>
+            <p class="lead">
+              Xin mời bạn đến sớm một chút để chúng ta có thể tìm nhau giữa niềm
+              vui, trao nhau những cái ôm và cùng lưu lại thật nhiều bức hình
+              của ngày trưởng thành.
+            </p>
+            <div class="button-row">
+              <a
+                class="button"
+                data-link="map"
+                href="https://maps.app.goo.gl/sJkxq9hN4T8QKiDv9"
+                target="_blank"
+                rel="noreferrer"
+                >Xem đường đi</a
+              >
+              <a
+                class="button button--ghost"
+                data-link="phone"
+                href="tel:0372977821"
+                >Xác nhận tham dự</a
+              >
+            </div>
+          </div>
+
+          <div class="details__list reveal">
+            <article class="detail-card">
+              <span class="detail-card__icon" aria-hidden="true">01</span>
+              <div>
+                <h3>Thời gian</h3>
+                <p>
+                  <span data-field="time">15:30</span> ·
+                  <span data-field="date-long"
+                    >Thứ Bảy, ngày 22 tháng 08 năm 2026</span
+                  >
+                </p>
+              </div>
+            </article>
+            <article class="detail-card">
+              <span class="detail-card__icon" aria-hidden="true">02</span>
+              <div>
+                <h3>Địa điểm</h3>
+                <p data-field="venue">Khuôn viên Đại học Kinh tế Quốc dân</p>
+              </div>
+            </article>
+            <article class="detail-card">
+              <span class="detail-card__icon" aria-hidden="true">03</span>
+              <div>
+                <h3>Địa chỉ</h3>
+                <p data-field="address">
+                  207 Giải Phóng, phường Bạch Mai, Hà Nội
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section timeline"
+        id="lich-trinh"
+        aria-labelledby="timeline-title"
+      >
+        <div class="section__inner">
+          <div class="timeline__head reveal">
+            <div>
+              <p class="eyebrow">Lịch trình</p>
+              <h2 id="timeline-title">
+                Cùng nhau đi qua <span class="gold">ngày rực rỡ.</span>
+              </h2>
+            </div>
+            <p class="lead">
+              Ba khoảng thời gian nhỏ, nhưng hy vọng sẽ trở thành một kỷ niệm
+              thật dài.
+            </p>
+          </div>
+          <div class="timeline__list reveal">
+            <article class="timeline__item">
+              <p class="timeline__time">14:30</p>
+              <h3>Lễ trao bằng</h3>
+              <p>
+                Cùng chứng kiến khoảnh khắc chiếc mũ cử nhân đánh dấu một chặng
+                đường đã hoàn thành.
+              </p>
+            </article>
+            <article class="timeline__item">
+              <p class="timeline__time">15:30</p>
+              <h3>Gặp nhau & chụp ảnh</h3>
+              <p>
+                Đón gia đình, thầy cô và những người bạn thân thương tại sảnh
+                Hội trường A2.
+              </p>
+            </article>
+            <article class="timeline__item">
+              <p class="timeline__time">16:30</p>
+              <h3>Lưu giữ kỷ niệm</h3>
+              <p>
+                Chụp ảnh tự do, gửi lời chúc và cùng nhau giữ lại dư âm của ngày
+                vui.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section gratitude"
+        id="cam-on"
+        aria-labelledby="gratitude-title"
+      >
+        <div class="section__inner reveal">
+          <div class="gratitude__ornament" aria-hidden="true">✦ ✦ ✦</div>
+          <p class="eyebrow">Lời cảm ơn</p>
+          <h2 id="gratitude-title">
+            Tấm bằng là tên tôi,<br />nhưng thành quả này
+            <span class="gold">có tên của rất nhiều người.</span>
+          </h2>
+          <p class="lead">
+            Cảm ơn gia đình đã luôn là nơi bình yên để tôi trở về. Cảm ơn thầy
+            cô đã trao tri thức, niềm tin và lòng kiên nhẫn. Cảm ơn những người
+            bạn đã biến áp lực thành tiếng cười, biến những ngày khó khăn thành
+            một phần thanh xuân đáng nhớ. Tôi mong được gặp tất cả mọi người
+            trong ngày đặc biệt này.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section closing"
+        id="hen-gap"
+        aria-labelledby="closing-title"
+      >
+        <div class="section__inner reveal">
+          <p class="eyebrow">Save the date</p>
+          <h2 id="closing-title">
+            Hẹn gặp bạn tại <span class="gold">NEU.</span>
+          </h2>
+          <p class="lead">
+            Không cần món quà nào cả. Sự hiện diện, một lời chúc và một tấm hình
+            cùng nhau đã là điều quý giá nhất với tôi.
+          </p>
+          <div class="button-row">
+            <a class="button" data-link="phone" href="tel:0372977821"
+              >Gọi xác nhận · <span data-field="phone">0372977821</span></a
+            >
+          </div>
+          <p class="signature" data-field="signature">Thân mến, Vũ Thị Tuyết</p>
+        </div>
+      </section>
+    </main>
+
+    <details class="helper">
+      <summary aria-label="Hướng dẫn tùy chỉnh">?</summary>
+      <div class="helper__panel">
+        <p><strong>Tùy chỉnh thiệp</strong></p>
+        <p>
+          Mở tệp HTML tương ứng bằng trình soạn thảo, tìm cụm
+          <strong>INVITATION_CONFIG</strong> ở cuối tệp rồi sửa thông tin trong
+          một chỗ duy nhất.
+        </p>
+        <p>
+          Hướng dẫn đầy đủ nằm trong tệp <strong>HUONG_DAN.md</strong> đi kèm.
+        </p>
+      </div>
+    </details>
+
+    <script>
+      // ==================== INVITATION_CONFIG ====================
+      // Chỉ cần sửa các giá trị bên phải để cá nhân hóa toàn bộ thiệp.
+      const INVITATION_CONFIG = {
+        name: "Vũ Thị Tuyết",
+        signature: "Thân mến, Vũ Thị Tuyết",
+        major: "Khoa học máy tính",
+        school: "Đại học Kinh tế Quốc dân",
+        classYear: "2021 — 2025",
+        time: "15:30",
+        date: "Thứ Bảy · 20.05.2025",
+        dateLong: "Thứ Bảy, ngày 22 tháng 08 năm 2026",
+        venueShort: "Hội trường A2 · NEU",
+        venue: "Khuôn viên Đại học Kinh tế Quốc dân",
+        address: "207 Giải Phóng, phường Bạch Mai, Hà Nội",
+        phone: "0372977821",
+        phoneHref: "tel:0372977821",
+        mapHref: "https://maps.app.goo.gl/sJkxq9hN4T8QKiDv9",
+      };
+
+      const fieldMap = {
+        name: INVITATION_CONFIG.name,
+        signature: INVITATION_CONFIG.signature,
+        major: INVITATION_CONFIG.major,
+        school: INVITATION_CONFIG.school,
+        "class-year": INVITATION_CONFIG.classYear,
+        time: INVITATION_CONFIG.time,
+        date: INVITATION_CONFIG.date,
+        "date-long": INVITATION_CONFIG.dateLong,
+        "venue-short": INVITATION_CONFIG.venueShort,
+        venue: INVITATION_CONFIG.venue,
+        address: INVITATION_CONFIG.address,
+        phone: INVITATION_CONFIG.phone,
+      };
+
+      Object.entries(fieldMap).forEach(([field, value]) => {
+        document
+          .querySelectorAll(`[data-field="${field}"]`)
+          .forEach((element) => {
+            element.textContent = value;
+          });
+      });
+
+      document.querySelectorAll('[data-link="phone"]').forEach((element) => {
+        element.href = INVITATION_CONFIG.phoneHref;
+      });
+
+      document.querySelectorAll('[data-link="map"]').forEach((element) => {
+        element.href = INVITATION_CONFIG.mapHref;
+      });
+
+      const progressBar = document.querySelector(".progress__bar");
+      const updateProgress = () => {
+        const scrollable =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress =
+          scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+      };
+
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      updateProgress();
+
+      const navLinks = Array.from(document.querySelectorAll(".site-nav__link"));
+      const navSections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      let scrollAnimationFrame;
+      const cancelScrollAnimation = () => {
+        if (scrollAnimationFrame) {
+          cancelAnimationFrame(scrollAnimationFrame);
+          scrollAnimationFrame = null;
+        }
+      };
+
+      const animateScrollTo = (target) => {
+        cancelScrollAnimation();
+        const navHeight = document.querySelector(".site-nav").offsetHeight;
+        const startY = window.scrollY;
+        const targetY = Math.max(0, target.offsetTop - navHeight - 10);
+        const distance = targetY - startY;
+        const duration = Math.min(
+          1300,
+          Math.max(700, Math.abs(distance) * 0.18),
+        );
+        const startTime = performance.now();
+
+        const easeInOutCubic = (progress) =>
+          progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        const step = (currentTime) => {
+          const progress = Math.min(1, (currentTime - startTime) / duration);
+          window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+
+          if (progress < 1) {
+            scrollAnimationFrame = requestAnimationFrame(step);
+          } else {
+            scrollAnimationFrame = null;
+          }
+        };
+
+        scrollAnimationFrame = requestAnimationFrame(step);
+      };
+
+      document.querySelectorAll('.site-nav a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const target = document.querySelector(link.getAttribute("href"));
+          if (!target) return;
+          event.preventDefault();
+          animateScrollTo(target);
+        });
+      });
+
+      window.addEventListener("wheel", cancelScrollAnimation, {
+        passive: true,
+      });
+      window.addEventListener("touchstart", cancelScrollAnimation, {
+        passive: true,
+      });
+
+      const updateActiveSection = () => {
+        const probe = window.scrollY + window.innerHeight * 0.42;
+        let activeSection = navSections[0];
+
+        navSections.forEach((section) => {
+          if (section.offsetTop <= probe) activeSection = section;
+        });
+
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${activeSection.id}`;
+          const wasActive = link.classList.contains("is-active");
+          link.classList.toggle("is-active", isActive);
+          if (isActive) {
+            link.setAttribute("aria-current", "true");
+            if (!wasActive) {
+              link.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+                inline: "center",
+              });
+            }
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      let navFrame;
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (navFrame) return;
+          navFrame = requestAnimationFrame(() => {
+            updateActiveSection();
+            navFrame = null;
+          });
+        },
+        { passive: true },
+      );
+      updateActiveSection();
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((element) => revealObserver.observe(element));
+    </script>
+  </body>
+</html>
